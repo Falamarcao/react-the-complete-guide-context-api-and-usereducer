@@ -1,22 +1,15 @@
-import { DUMMY_PRODUCTS } from '../data/dummy-products.ts';
-import Product from './Product.js';
+import { ReactNode } from 'react';
 
 interface ShopProps {
-  onAddItemToCart: (id: string) => void;
+  children: ReactNode;
 }
 
-export default function Shop({ onAddItemToCart }: ShopProps) {
+export default function Shop({ children }: ShopProps) {
   return (
     <section id="shop">
       <h2>Elegant Clothing For Everyone</h2>
 
-      <ul id="products">
-        {DUMMY_PRODUCTS.map((product) => (
-          <li key={product.id}>
-            <Product {...product} onAddToCart={onAddItemToCart} />
-          </li>
-        ))}
-      </ul>
+      <ul id="products">{children}</ul>
     </section>
   );
 }
