@@ -2,7 +2,7 @@ import { useContext } from 'react';
 
 import { Product as ProductModel } from '../models/Product';
 
-import { CartContext } from '../store/shopping-cart-context';
+import { CartContext } from '../store/ShoppingCart/context';
 
 export default function Product({
   id,

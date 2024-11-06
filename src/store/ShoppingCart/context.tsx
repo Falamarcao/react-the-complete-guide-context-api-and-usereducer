@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { ShoppingCart } from '../models/ShoppingCart';
+import { ShoppingCart } from '../../models/ShoppingCart.ts';
 
 interface CartContextType extends ShoppingCart {
   addItemToCart: (id: string) => void;
