@@ -1,6 +1,10 @@
 import { createContext } from 'react';
 import { ShoppingCart } from '../models/ShoppingCart';
 
-export const CartContext = createContext<ShoppingCart>({
-  items: [],
-});
+interface CartContextType extends ShoppingCart {
+  addItemToCart: (id: string) => void;
+}
+
+export const CartContext = createContext<CartContextType>(
+  {} as CartContextType
+);
