@@ -4,7 +4,7 @@ import Shop from './components/Shop';
 
 import { DUMMY_PRODUCTS } from './data/dummy-products';
 
-import CartContextProvider from './store/ShoppingCart/CartContextProvider';
+import CartContextProvider from './store/ShoppingCart/CartContextProvider-useReducer';
 
 function App() {
   return (
